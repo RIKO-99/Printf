@@ -10,7 +10,7 @@
  */
 int _printf(const char *format, ...)
 {
-	char *p, *sval;
+	const char *p, *sval;
 	int ival;
 
 	va_list ap; /*points to each unamed arguments*/
@@ -41,4 +41,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(ap);
+	return (*p);
 }
